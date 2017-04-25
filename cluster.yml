@@ -53,3 +53,4 @@
     - common
     - { role: docker, tags: [ 'docker' ] }
     - { role: mesosphere, tags: [ 'mesos' ], mesos_mode: agent }
+    - monitor

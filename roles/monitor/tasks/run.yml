@@ -1,0 +1,19 @@
+---
+- name: Make sure cAdisor is running and config is up-to-date
+  sudo: yes
+  docker:
+    image: "{{cadvisor_docker_image}}"
+    name: "{{cadvisor_name}}"
+    volumes:
+      - "/:/rootfs:ro"
+      - "/sys:/sys:ro"
+      - "/var/run:/var/run:rw"
+      - "/var/lib/docker/:/var/lib/docker:ro"
+    ports:
+      - "8080:8080"
+    expose:
+      - 8080
+    privileged: True
+    net: host
+    restart_policy: always
+    state: reloaded

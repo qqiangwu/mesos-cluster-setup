@@ -1,0 +1,4 @@
+- name: Pull cAdvisor docker image
+  docker:
+    image: "{{cadvisor_docker_image}}"
+    state: present

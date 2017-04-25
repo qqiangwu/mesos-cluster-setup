@@ -1,0 +1,4 @@
+---
+cadvisor_version: "v0.25.0"
+cadvisor_docker_image: "google/cadvisor:{{cadvisor_version}}"
+cadvisor_name: "cAdvisor"
